@@ -1,0 +1,42 @@
+.pro {
+    background-image: url(./Photos/TOURNAMENTS-BG.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.pro .layout {
+    background: radial-gradient(400px 300px ,rgba(112,96,254,.5) ,var(--min-color));
+    padding: 30px;
+    height: 100%;
+    color: var(--white-color);
+}
+.pro .layout .text h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.pro .layout .text h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.pro .layout .text h3 span {
+    margin-left: 30px;
+}
+.pro .layout button {
+    background-color: black;
+    color: var(--white-color);
+    padding: 8px 15px;
+    font-size: 17px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+/* 
+    Set Media
+*/
+
+@media (max-width:768px) {
+    .pro .text {
+        text-align: center;
+    }
+}

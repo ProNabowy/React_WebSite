@@ -1,0 +1,169 @@
+header {
+    position: relative;
+    background: var(--second-color);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    transition: var(--transtion);
+    /* overflow: hidden; */
+    z-index: 101111111110;
+}
+header img {
+    width: 50px;
+    height: 50px;
+}
+header .headContainer .lists {
+    display: flex;
+    align-items: center;
+}
+header .headContainer .lists .logo {
+    margin-right: 20px;
+}
+header .headContainer .lists .links li a {
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: bolder;
+    color: var(--white-color);
+}
+header .headContainer .icones {
+    display: flex;
+}
+header .headContainer .icones .item {
+    margin-left: 20px;
+}
+header .headContainer .icones .item:first-child svg {
+    margin-left: 10px;
+    color: var(--white-color);
+    cursor: pointer;
+}
+header .headContainer .icones .item:last-child h3 {
+    font-weight: bolder;
+    color: var(--white-color);
+    margin-right: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+header .headContainer .icones .item:last-child .imge {
+    background-color: var(--white-color);
+    border-radius: 12px ;
+    transform: rotate(39deg);
+    position: relative;
+    padding: 3px;
+}
+header .headContainer .icones .item:last-child img {
+    width: 35px;
+    height: 30px;
+    transform: rotate(-39deg);
+}
+
+header .mnue {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    right: 20px;
+    top: 20px;
+    transition: var(--transtion);
+    transform: scale(0);    
+}
+
+/* 
+    =================================== Make Header Full Responsive ===================================
+*/
+
+@media (max-width: 991px) {
+    header .lists .links {
+        position: absolute;
+        top: 54px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 94px);
+        background: radial-gradient(500px ,rgba(0,0,0,.9) ,#1f2334);
+        flex-direction: column;
+        justify-content: center !important;
+        transition: var(--transtion);
+    }
+    header .lists .links::after {
+        content: "";
+        width: 100%;
+        height: calc(100vh - 94px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(./Photos/background.png);
+        background-position: center center;
+        background-size: cover;
+        z-index: -1;
+    }
+    header .lists .links li {
+        margin-bottom: 10px;
+        font-size: 25px;
+        position: relative;
+        transition: var(--transtion);
+        overflow: hidden;
+        padding-bottom: 5px;
+    }
+    header .lists .links li a {
+        margin-left: 0 !important;
+    }
+    header .lists .links li:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: var(--second-color);
+        position: absolute;
+        left: -1000px;
+        bottom: 0;
+        transition: var(--transtion);
+    }
+
+    header .lists .links li:hover::after {
+        left: 0px;
+    }
+    header .icones .item:first-child {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 85vh;
+        transition: var(--transtion);
+    }
+    header .icones .item:first-child svg {
+        margin-left: 50px !important;
+        font-size: 25px;
+    }
+    header .icones .item:last-child {
+        margin-right: 20px;
+        margin-left: 0 !important;
+    }
+    header .mnue {
+        position: absolute;
+        visibility: visible;
+        top: 10px;
+        opacity: 1;
+        transform: scale(1);    
+    }
+    header .mnue svg {
+        position: absolute;
+        left: -40px;
+        top: -13px;
+        font-size: 40px;
+        cursor: pointer;
+        transform: 0.5s;
+        color: var(--white-color);
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+}
+
+@media (max-width: 768px)  {
+    header .icones .item:last-child  {
+        margin-right: 40px;
+    }
+    header .mnue {
+        right: 15px !important;
+        top: 10px;
+    }
+    header .icones .item:first-child svg {
+        margin-left: 0 !important;
+        margin-right: 20px !important;
+    }
+}

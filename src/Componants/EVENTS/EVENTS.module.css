@@ -1,0 +1,123 @@
+.events {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(500px ,rgba(0,0,0,.5) ,#1f2334);
+    color: var(--white-color);
+}
+.events .evc {
+    padding: 30px 0 ;
+    position: relative;
+    overflow: hidden;
+}
+.events .evc::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(./Photos/background.png);
+    background-size: cover;
+    background-position: center center;
+}
+.events .evc .evNav {
+    margin-bottom: 30px;
+}
+.events .evc .evNav > div h1 {
+    margin-right: 20px;
+}
+.events .evc .evNav > div .btns button {
+    padding: 8px 15px;
+    background-color: var(--min-color); 
+    color: white;
+    cursor: pointer;
+    font-weight: 800;
+}
+.events .evc .evNav > div .btns button:first-child {
+    padding: 10px 15px;
+}
+.events .evc .evNav > div .btns button:last-child {
+    background-color: var(--thired-color);
+}
+.events .evc .evNav > p a {
+    color: var(--min-color); 
+    font-weight: 800;
+}
+.events .cards {
+    flex-wrap: wrap;
+    transition: 1.5s;
+}
+.events .cards img {
+    width: 59px;
+}
+.events .cards .card {
+    border: 5px solid #343a40;
+    position: relative;
+
+    background-image: url(./Photos/LEAGUES-BOX-BG.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: calc(95%  / 3);
+}
+.events .cards .card .layout {
+    padding: 10px;
+    background: radial-gradient(500px ,rgba(0,0,0,.5) ,#1f2334);
+}
+.events .cards .card .wrapper {
+    display: flex;
+    align-items: center;
+}
+.events .cards .card .wrapper .imge {
+    margin-right: 20px;
+}
+.events .cards .card .wrapper .imge img {
+    margin-bottom: 15px;
+}
+.events .cards .card .wrapper .text h4  {
+    margin-bottom: 20px;
+}
+.events .cards .card .wrapper .text h5 {
+    margin-bottom: 5px;
+}
+.events .cards .card .wrapper .text h5:last-child {
+    margin-bottom: 15px;
+}
+.events .cards .card .btns {
+    margin: 5px 0;
+}
+.events .cards .card .btns button {
+    color: var(--white-color);
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--min-color);
+    transition: var(--transtion);
+}
+.events .cards .card .btns button:last-child {
+    background-color: var(--min-color);
+}
+.events .cards .card .btns button:first-child:hover {
+    background-color: var(--min-color);
+}
+.events .cards .card .btns button:last-child:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 991px) {
+    .events .cards {
+        justify-content: center !important;
+    }
+    .events .cards .card {
+        width: calc(97% / 2) !important;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .events .cards .card {
+        width: 98% !important;
+        margin-bottom: 10px;
+    }
+}

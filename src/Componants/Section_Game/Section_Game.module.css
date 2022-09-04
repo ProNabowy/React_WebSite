@@ -1,0 +1,182 @@
+.sectionGame {
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(500px ,rgba(0,0,0,.5) ,#1f2334);
+}
+.sectionGame::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(./background.png);
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+.sectionGame .parent {
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.sectionGame .parent .card {
+    position: absolute;
+    bottom: -1000px;
+    width: calc(96% / 3);
+    border: 5px solid var(--thired-color);
+    background-image: url(./background.png);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+    margin: 10px 0;
+    display: flex;
+    z-index: 222;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 3.5s;
+}
+.sectionGame .parent .card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: radial-gradient(150px 60px ,rgba(0,0,0,.5) ,#1f2334);
+    z-index: -1;
+
+}
+.sectionGame .parent .card .head {
+    align-items: center;
+    flex-direction: column;
+    margin-right: 5px;
+}
+.sectionGame .parent .card .head img {
+    width: 28px;
+    height: 28px;
+}
+.sectionGame .parent .card .head h1 {
+    font-size: 16px;
+    color: var(--white-color);
+}
+.sectionGame .parent .card .text {
+    padding-right: 10px;
+    font-weight: bolder;
+    width: calc(100% - 28px);
+}
+.sectionGame .parent .card .text h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.sectionGame .parent .card .text h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.sectionGame .parent .card .text .starts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+.sectionGame .parent .card .text .starts .btn {
+    background-color: var(--min-color);
+    color: var(--white-color);
+    padding: 7px 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+}
+
+.sectionGame .nav .title {
+    color: var(--white-color);
+}
+.sectionGame .nav .title h1 {
+    margin-right: 20px;
+}
+
+.sectionGame .nav .title .btns button {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sectionGame .nav .title .btns button:first-child {
+    background-color: var(--min-color);
+    padding: 8px 15px;
+}
+.sectionGame .nav .title .btns button:last-child {
+    background-color: var(--thired-color);
+}
+.sectionGame .nav .navFilter  {
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.sectionGame .nav .navFilter ul li {
+    margin-right: 20px;
+    color: #6c757d;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.sectionGame .nav .navFilter p a {
+    color: var(--min-color);
+    font-size: 15px;
+    font-weight: bolder;
+}
+.sectionGame .games .gamesNav {
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.sectionGame .games .gamesNav h1 {
+    font-size: 20px;
+    color: var(--white-color);
+}
+.sectionGame .games .gamesNav p a {
+    font-size: 13px;
+    color: var(--white-color);
+}
+/* 
+    Set APP Media 
+*/
+
+@media (max-width: 991px) {
+    .sectionGame {
+        padding: 30px;
+    }
+    .sectionGame .parent .card {
+        width: calc(97% / 2);
+    }
+}
+@media (max-width: 768px) {
+    .sectionGame {
+        padding: 10px;
+    }
+    .sectionGame .parent .card {
+        width: 97%;
+        margin: 10px auto !important;
+    }
+    .sectionGame .nav .title {
+        flex-direction: column;
+    }
+    .sectionGame .nav .title h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    .sectionGame .nav .navFilter ul {
+        margin: 10px auto;
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    .sectionGame .nav .navFilter p {
+        margin: 10px auto;
+    }
+}

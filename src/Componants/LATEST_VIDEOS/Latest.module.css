@@ -1,0 +1,121 @@
+.latest {
+    padding: 30px;
+    background: radial-gradient(0px ,rgba(0,0,0,.5) ,#1f2334);
+    color: var(--white-color);
+}
+.latest .latHead {
+    margin-bottom: 20px;
+}
+.latest .latHead p a {
+    color: var(--second-color);
+    font-size: 18px;
+}
+.latest .cards {
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.latest .cards .fullCard,
+.latest .cards .HalfCard {
+    width: calc(95% / 4);
+    height: 400px;
+    background-color: red;
+    position: relative;
+}
+.latest .cards .fullCard,
+.latest .cards .HalfCard .lc,
+.latest .cards .HalfCard .fc {
+    background-position: center;
+    background-size: cover;
+}
+.latest .cards .fullCard:first-child {
+    background-image: url(./imges/VIDEO-01.jpg);
+}
+.latest .fullCard{
+    background-image: url(./imges/VIDEO-04.jpg) ;
+}
+.latest .cards .fullCard .layout,
+.latest .cards .HalfCard .layout {
+    width: 100%;
+    height: 100%;
+}
+.latest .cards .fullCard:first-child .layout {
+    background: linear-gradient(transparent ,var(--min-color) 300px);
+}
+.latest .cards .fullCard .layout {
+    background: linear-gradient(transparent ,#2b3149 300px);
+}
+
+.latest .cards .fullCard .layout,
+.latest .cards .HalfCard .lc .layout,
+.latest .cards .HalfCard .fc .layout {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.latest .cards .HalfCard .lc .layout,
+.latest .cards .HalfCard .fc .layout {
+    background: linear-gradient(transparent ,#2b3149 150px);
+}
+.latest .cards .HalfCard:nth-child( 2 ) .fc{
+    background-image: url(./imges/VIDEO-02.jpg);
+}
+.latest .cards .HalfCard:nth-child( 2 ) .lc{
+    background-image: url(./imges/VIDEO-03.jpg);
+}
+.latest .cards .HalfCard:nth-child( 4 ) .fc{
+    background-image: url(./imges/VIDEO-05.jpg);
+}
+.latest .cards .HalfCard:nth-child( 4 ) .lc{
+    background-image: url(./imges/VIDEO-06.jpg);
+}
+
+.latest .cards .HalfCard .lc,
+.latest .cards .HalfCard .fc {
+    height: 50%;
+}
+.latest .cards .fullCard .layout .play,
+.latest .cards .HalfCard .lc .play,
+.latest .cards .HalfCard .fc .play {
+    margin-bottom: 10px;
+}
+.latest .cards .fullCard .layout .play p ,
+.latest .cards .HalfCard .lc .play p ,
+.latest .cards .HalfCard .fc .play p {
+    font-weight: 600;
+}
+.latest .cards .fullCard .layout .play svg,
+.latest .cards .HalfCard .lc .play svg,
+.latest .cards .HalfCard .fc .play svg {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.latest .cards .fullCard .layout h2,
+.latest .cards .HalfCard h2  {
+    align-self: flex-start;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+/* 
+    Set Media 
+*/
+
+@media (max-width: 991px) {
+    .latest .cards .fullCard,
+    .latest .cards .HalfCard {
+        width: calc(97% / 2);
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .latest {
+        padding: 0px;
+    }
+    .latest .cards .fullCard,
+    .latest .cards .HalfCard {
+        width: 97%;
+        margin: 10px auto !important;
+    }
+}

@@ -1,0 +1,133 @@
+.landing {
+    position: relative;
+    height: calc(100vh - 95px);
+    color: var(--white-color);
+    background: radial-gradient(500px ,rgba(0,0,0,.5) ,#1f2334);
+    padding: 20px;
+}
+.landing::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(./background.png);
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+.landing .arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    animation: upDown 1s infinite  linear alternate  ;
+    transition: var(--transtion);
+}
+.landing .upBtn {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--second-color);
+    font-size: 20px;
+    color: var(--white-color);
+    cursor: pointer;
+    z-index: 5555555555;
+    position: fixed;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    right: 20px;
+    bottom: 20px;
+    transition: var(--transtion);
+}
+.landing .upBtn.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.landing .arrow:hover {
+    color: var(--min-color);
+}
+.landing  .text {
+    text-align: center;
+}
+.landing  .text p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.landing  .text h3 {
+    font-size: 35px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.landing  .text button {
+    color: var(--white-color);
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--min-color);
+    margin-bottom: 20px;
+}
+.landing .categories {
+    padding: 20px 0;
+}
+.landing .categories > div div {
+    margin-right: 15px;
+    padding: 7px;
+    font-size: 20px;
+    background-color: var(--min-color);
+    color: var(--white-color);
+    transform: rotate(36deg);
+    border: 2px solid var(--white-color);
+    outline: 2px solid var(--min-color);
+    cursor: pointer;
+}
+.landing .categories > div div svg {
+    transform: rotate(-36deg);
+}
+.landing .categories > div p {
+    font-weight: bolder;
+}
+.landing .categories > div p span {
+    font-size: 20px;
+}
+
+/* 
+    Make Landing Full Responsive
+*/
+
+@media(max-width:991px) {
+    .landing .categories {
+        flex-wrap: wrap;
+    }
+    .landing .categories > div {
+        width: calc(95% / 2);
+        margin-bottom: 22px;
+    }
+    .landing .categories > div {
+        justify-content: center !important;
+    }
+    .landing .categories > div div {
+        transform: rotate(45deg);
+    }
+}
+
+/* 
+    Start Create Animation
+*/
+@keyframes upDown {
+    0% {
+        bottom: 0px;
+    }
+    25% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 30px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}

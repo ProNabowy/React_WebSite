@@ -1,0 +1,116 @@
+footer {
+    background-color: #12151e;
+}
+footer .wrapper {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--white-color);
+}
+footer .wrapper .list h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+footer .wrapper .list li {
+    margin-bottom: 10px;
+}
+footer .wrapper .list li a {
+    color: var(--white-color);
+    position: relative;
+    display: block;
+    font-weight: 600;
+    overflow: hidden;
+    width: fit-content;
+}
+
+footer .wrapper .list li a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: -200px;
+    bottom: 0;
+    background-color: var(--second-color);
+    transition: var(--transtion);
+}
+footer .wrapper .list li a:hover::after {
+    left: 0px;
+}
+footer .foIc {
+
+    color: var(--white-color);
+    letter-spacing: 3px;
+    padding: 20px;
+}
+footer .foIc .icone div   {
+    margin-left: 30px;
+    background-color: var(--second-color);
+    width: 40px;
+    height: 40px;
+    transform: rotate(51deg);
+    position: relative;
+}
+footer .foIc .icone div::after {
+    content: "";
+    width: 110%;
+    height: 110%;
+    border: 2px solid var(--second-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+footer .foIc .icone div svg {
+    font-size: 20px;
+    cursor: pointer;
+    transform: rotate(-51deg);
+}
+
+/* 
+    Set Media 
+*/
+
+@media (max-width: 991px) {
+    footer .foIc {
+        padding: 20px 0;
+    }
+    footer .foIc h4 {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+    footer .foIc .icone div {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (max-width: 768px) {
+    footer .wrapper ul {
+        width: 97%;
+        margin-bottom: 20px;
+        border-bottom: 1px solid white;
+        text-align: center;
+    }
+    footer .wrapper ul li a {
+        margin: 10px auto;
+    }
+    footer .foIc {
+        flex-wrap: wrap;
+    }
+    footer .foIc h4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer .foIc .icone {
+        order: -1;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    footer .foIc .icone {
+        justify-content: center;
+    }
+    footer .foIc .icone div {
+        margin-right: 10px;
+    }
+}
